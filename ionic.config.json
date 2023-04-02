@@ -1,0 +1,8 @@
+{
+  "name": "Tok'd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "a04e6cc3"
+}
