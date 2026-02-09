@@ -3,6 +3,5 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "react",
-  "id": "a04e6cc3"
+  "type": "react-vite"
 }
