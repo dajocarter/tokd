@@ -7,6 +7,7 @@
 ### Key Technology Stack
 
 - **UI Framework**: Ionic React 8.5.0 + React 19
+- **Backend**: Firebase (Firestore, Authentication, Storage)
 - **Build Tool**: Vite 5.0 with TypeScript support
 - **Mobile**: Capacitor 8.0 for native platform integration
 - **Testing**: Vitest (unit), Cypress (e2e)
