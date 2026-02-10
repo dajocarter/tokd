@@ -2,7 +2,26 @@
 
 ## Project Overview
 
-**Tok'd** is an Ionic/React mobile application built with Vite, TypeScript, and Capacitor. It uses a tab-based navigation architecture with three main page sections (Tab1, Tab2, Tab3) powered by React Router.
+**Tok'd** is an Ionic/React mobile application built with Vite, TypeScript, and Capacitor. It uses a tab-based navigation architecture powered by React Router.
+
+Tok'd is essentially Untappd but for weed instead of drinks. The purpose of the app is for users to document their experience with a "sesh-in" about the cannabis products they bought.
+
+### User Stories
+
+- Users must enter their birthdate to verify they're 21 or older to use the app.
+- Users can create an account with email and password, or sign in with a social provider (Google).
+- Users can login and logout of their account.
+- Users can view their sesh-ins to track their usage and recall their experience with products. Users can see how many sesh-ins they've had, photos of their sesh-ins, a line graph of their sesh-in ratings (x-axis is rating value and y-axis is # of sesh-ins with that rating value), which products they use the most, which brands they use the most, which effects they feel the most, which flavors they taste the most, recommended products they haven't used.
+- Users can view and edit their profile to change their profile image, profile background image, first and last name, gender, birthdate, location (city, state), email, and description.
+- Users can view products to see how other users rate it.
+- Users can view brands to see their products.
+- Users can request other users to be "friends".
+- Users can see, comment on, and like their friend's sesh-ins.
+- Users can create products if they're admins.
+- Users can suggest changes to products by including a description and image of the requested change.
+- Users can create brands if they're admins.
+- Users can create sesh-ins by selecting an existing product. They can include their own image of the product, rate 0-5 by 0.5, description, tag friends, choose one or more effects of the product, choose one or more flavors of the product, select or create a purchase location, select or create a sesh-in location. Only the rating is necessary, all other fields are optional.
+- Sesh-ins can earn the user badges such as "10x sesh-ins at this location", "10x sesh-ins with this product", "10x sesh-ins with this brand", etc.
 
 ### Key Technology Stack
 
