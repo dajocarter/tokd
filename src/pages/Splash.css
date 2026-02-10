@@ -1,3 +1,15 @@
+.splash-toolbar {
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+}
+.splash-toolbar .splash-title {
+  margin: 0 auto;
+  text-align: center;
+  color: var(--ion-color-primary-contrast);
+}
+
 .splash-content {
   --padding-top: 16px;
 }
@@ -9,8 +21,34 @@
   justify-content: center;
   height: 100%;
   padding: 24px;
-  gap: 16px;
+  gap: 48px;
   text-align: center;
+}
+
+.splash-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.splash-description h2 {
+  margin-top: 0;
+}
+
+.splash-description img {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.splash-description p {
+  margin-bottom: 0;
+  max-width: 280px;
+  line-height: 1.5;
 }
 
 .splash-actions {
