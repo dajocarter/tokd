@@ -17,6 +17,8 @@ import Tab3 from './pages/Tab3'
 import Splash from './pages/Splash'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import { AuthProvider, useAuth } from './context/AuthContext'
+import { IonSpinner } from '@ionic/react'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -50,46 +52,84 @@ import './theme/variables.css'
 
 setupIonicReact()
 
+function Routes() {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          height: '100vh',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <IonSpinner name='crescent' />
+      </div>
+    )
+  }
+
+  if (!user) {
+    return (
+      <IonRouterOutlet>
+        <Route exact path='/'>
+          <Splash />
+        </Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/signup'>
+          <Signup />
+        </Route>
+        <Route>
+          <Splash />
+        </Route>
+      </IonRouterOutlet>
+    )
+  }
+
+  return (
+    <IonTabs>
+      <IonRouterOutlet>
+        <Route exact path='/tab1'>
+          <Tab1 />
+        </Route>
+        <Route exact path='/tab2'>
+          <Tab2 />
+        </Route>
+        <Route path='/tab3'>
+          <Tab3 />
+        </Route>
+        <Route exact path='/'>
+          <Redirect to='/tab1' />
+        </Route>
+      </IonRouterOutlet>
+      <IonTabBar slot='bottom'>
+        <IonTabButton tab='tab1' href='/tab1'>
+          <IonIcon aria-hidden='true' icon={triangle} />
+          <IonLabel>Tab 1</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab='tab2' href='/tab2'>
+          <IonIcon aria-hidden='true' icon={ellipse} />
+          <IonLabel>Tab 2</IonLabel>
+        </IonTabButton>
+        <IonTabButton tab='tab3' href='/tab3'>
+          <IonIcon aria-hidden='true' icon={square} />
+          <IonLabel>Tab 3</IonLabel>
+        </IonTabButton>
+      </IonTabBar>
+    </IonTabs>
+  )
+}
+
 export default function App() {
   return (
     <IonApp>
       <IonReactRouter>
-        <IonTabs>
-          <IonRouterOutlet>
-            <Route exact path='/tab1'>
-              <Tab1 />
-            </Route>
-            <Route exact path='/tab2'>
-              <Tab2 />
-            </Route>
-            <Route path='/tab3'>
-              <Tab3 />
-            </Route>
-            <Route exact path='/'>
-              <Splash />
-            </Route>
-            <Route exact path='/login'>
-              <Login />
-            </Route>
-            <Route exact path='/signup'>
-              <Signup />
-            </Route>
-          </IonRouterOutlet>
-          <IonTabBar slot='bottom'>
-            <IonTabButton tab='tab1' href='/tab1'>
-              <IonIcon aria-hidden='true' icon={triangle} />
-              <IonLabel>Tab 1</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab='tab2' href='/tab2'>
-              <IonIcon aria-hidden='true' icon={ellipse} />
-              <IonLabel>Tab 2</IonLabel>
-            </IonTabButton>
-            <IonTabButton tab='tab3' href='/tab3'>
-              <IonIcon aria-hidden='true' icon={square} />
-              <IonLabel>Tab 3</IonLabel>
-            </IonTabButton>
-          </IonTabBar>
-        </IonTabs>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
       </IonReactRouter>
     </IonApp>
   )
