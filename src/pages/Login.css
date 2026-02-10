@@ -1,0 +1,9 @@
+.error-message {
+  padding: 12px;
+  margin-bottom: 16px;
+  background-color: rgba(var(--ion-color-danger-rgb), 0.15);
+  color: var(--ion-color-danger);
+  border-radius: 4px;
+  font-size: 14px;
+  border-left: 4px solid var(--ion-color-danger);
+}
