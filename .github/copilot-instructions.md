@@ -23,19 +23,19 @@ All UI components follow Ionic's composable structure:
 - Pages use `IonPage` wrapper with `IonHeader`, `IonToolbar`, and `IonContent`
 - Components are functional React components with `.tsx` extension
 - Styling is colocated (e.g., `Tab1.tsx` with `Tab1.css`)
-- Layout examples: [src/pages/Tab1.tsx](src/pages/Tab1.tsx)
+- Layout examples: [src/pages/Tab1.tsx](../src/pages/Tab1.tsx)
 
 ### 2. **Routing**
 
 - Uses React Router v5 with Ionic's `IonReactRouter` wrapper
 - Tab navigation managed by `IonTabs` + `IonTabButton` at root level
 - Routes defined as exact paths (e.g., `/tab1`, `/tab2`, `/tab3`)
-- See [src/App.tsx](src/App.tsx) for the routing setup
+- See [src/App.tsx](../src/App.tsx) for the routing setup
 
 ### 3. **Ionic CSS Architecture**
 
 - Core Ionic styles imported in `App.tsx`
-- Custom theme variables in [src/theme/variables.css](src/theme/variables.css)
+- Custom theme variables in [src/theme/variables.css](../src/theme/variables.css)
 - Dark mode configured to use system preference (`dark.system.css`)
 - Optional CSS utilities available but mostly commented out
 
@@ -79,9 +79,9 @@ npm run lint         # ESLint code quality checks
 ### Testing Strategy
 
 - **Unit tests**: Use `@testing-library/react` with `render()` helper
-- **Setup file**: [src/setupTests.ts](src/setupTests.ts) provides `matchMedia` mock for Ionic components
+- **Setup file**: [src/setupTests.ts](../src/setupTests.ts) provides `matchMedia` mock for Ionic components
 - **E2E tests**: Cypress with baseUrl pointing to dev server
-- Example test: [src/App.test.tsx](src/App.test.tsx) (renders without crashing pattern)
+- Example test: [src/App.test.tsx](../src/App.test.tsx) (renders without crashing pattern)
 
 ### ESLint Rules
 
@@ -94,15 +94,15 @@ npm run lint         # ESLint code quality checks
 
 ## Key Files Reference
 
-| File                                               | Purpose                                 |
-| -------------------------------------------------- | --------------------------------------- |
-| [src/App.tsx](src/App.tsx)                         | Root component, routing, tab navigation |
-| [src/pages/](src/pages/)                           | Page components (Tab1, Tab2, Tab3)      |
-| [src/components/](src/components/)                 | Reusable UI components                  |
-| [src/theme/variables.css](src/theme/variables.css) | Ionic theme customization               |
-| [vite.config.ts](vite.config.ts)                   | Build configuration, Vitest settings    |
-| [eslint.config.js](eslint.config.js)               | Linting rules                           |
-| [capacitor.config.ts](capacitor.config.ts)         | Native app configuration                |
+| File                                                  | Purpose                                 |
+| ----------------------------------------------------- | --------------------------------------- |
+| [src/App.tsx](../src/App.tsx)                         | Root component, routing, tab navigation |
+| [src/pages/](../src/pages/)                           | Page components (Tab1, Tab2, Tab3)      |
+| [src/components/](../src/components/)                 | Reusable UI components                  |
+| [src/theme/variables.css](../src/theme/variables.css) | Ionic theme customization               |
+| [vite.config.ts](../vite.config.ts)                   | Build configuration, Vitest settings    |
+| [eslint.config.js](../eslint.config.js)               | Linting rules                           |
+| [capacitor.config.ts](../capacitor.config.ts)         | Native app configuration                |
 
 ---
 
