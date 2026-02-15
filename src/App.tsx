@@ -10,10 +10,10 @@ import {
   setupIonicReact,
 } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
-import { ellipse, square, triangle } from 'ionicons/icons'
+import { ellipse, personCircleSharp, triangle } from 'ionicons/icons'
 import Tab1 from './pages/Tab1'
 import Tab2 from './pages/Tab2'
-import Tab3 from './pages/Tab3'
+import Account from './pages/Account'
 import Splash from './pages/Splash'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
@@ -98,8 +98,8 @@ function Routes() {
         <Route exact path='/tab2'>
           <Tab2 />
         </Route>
-        <Route path='/tab3'>
-          <Tab3 />
+        <Route path='/account'>
+          <Account />
         </Route>
         <Route exact path='/'>
           <Redirect to='/tab1' />
@@ -114,9 +114,9 @@ function Routes() {
           <IonIcon aria-hidden='true' icon={ellipse} />
           <IonLabel>Tab 2</IonLabel>
         </IonTabButton>
-        <IonTabButton tab='tab3' href='/tab3'>
-          <IonIcon aria-hidden='true' icon={square} />
-          <IonLabel>Tab 3</IonLabel>
+        <IonTabButton tab='account' href='/account'>
+          <IonIcon aria-hidden='true' icon={personCircleSharp} />
+          <IonLabel>Account</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>
