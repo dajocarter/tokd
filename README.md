@@ -69,3 +69,12 @@ npm run dev
 - This is a demo project; authentication currently expects Firebase configuration but you can run the UI and flows locally without Firebase by stubbing or providing test credentials.
 - The codebase follows Ionic conventions for pages and uses strict TypeScript settings.
 - Styling uses the Ionic theme variables so colors and dark mode are easy to adjust.
+
+## Tracker
+
+### Day 0
+
+- Initialize app
+- Add Firebase for a realtime DB
+- Create, style, and edit Splash for logged-out users
+- Create signup and login pages
