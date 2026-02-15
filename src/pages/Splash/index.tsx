@@ -6,7 +6,7 @@ import {
   IonContent,
   IonButton,
 } from '@ionic/react'
-import './Splash.css'
+import './index.css'
 
 export default function Splash() {
   return (

@@ -5,24 +5,24 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react'
-import ExploreContainer from '../components/ExploreContainer'
-import './Account.css'
+import ExploreContainer from '../../components/ExploreContainer'
+import './index.css'
 
-export default function Account() {
+export default function Tab2() {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Account</IonTitle>
+          <IonTitle>Tab 2</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Account</IonTitle>
+            <IonTitle size='large'>Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name='Account page' />
+        <ExploreContainer name='Tab 2 page' />
       </IonContent>
     </IonPage>
   )

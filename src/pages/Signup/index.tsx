@@ -12,8 +12,8 @@ import {
   IonSpinner,
 } from '@ionic/react'
 import { useHistory } from 'react-router-dom'
-import { useAuth } from '../context/AuthContext'
-import './Signup.css'
+import { useAuth } from '../../context/AuthContext'
+import './index.css'
 
 export default function Signup() {
   const [email, setEmail] = useState('')
