@@ -42,14 +42,14 @@ All UI components follow Ionic's composable structure:
 
 - Pages use `IonPage` wrapper with `IonHeader`, `IonToolbar`, and `IonContent`
 - Components are functional React components with `.tsx` extension
-- Styling is colocated (e.g., `Tab1.tsx` with `Tab1.css`)
-- Layout examples: [src/pages/Tab1.tsx](../src/pages/Tab1.tsx)
+- Styling is colocated (e.g., `Account/index.tsx` with `Account/index.css`)
+- Layout examples: [src/pages/Account/index.tsx](../src/pages/Account/index.tsx)
 
 ### 2. **Routing**
 
 - Uses React Router v5 with Ionic's `IonReactRouter` wrapper
 - Tab navigation managed by `IonTabs` + `IonTabButton` at root level
-- Routes defined as exact paths (e.g., `/tab1`, `/tab2`, `/tab3`)
+- Routes defined as exact paths (e.g., `/account`, `/discover`, `/activity`) with corresponding page components
 - See [src/App.tsx](../src/App.tsx) for the routing setup
 
 ### 3. **Ionic CSS Architecture**
@@ -92,7 +92,7 @@ npm run lint         # ESLint code quality checks
 ### TypeScript & JSX
 
 - **Strict mode enabled** in `tsconfig.json`
-- React functional components typed as `React.FC` or with explicit return type
+- React functional components use function declaration syntax (e.g., `function Account() { ... }`) for better stack traces and readability
 - Default export pattern for page components
 - JSX syntax: `jsx: react-jsx` (automatic JSX transform, no React import needed)
 
