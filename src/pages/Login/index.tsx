@@ -48,44 +48,54 @@ export default function Login() {
         </IonToolbar>
       </IonHeader>
       <IonContent className='ion-padding'>
-        {error && <div className='error-message'>{error}</div>}
-        <IonItem>
-          <IonLabel position='stacked'>Email</IonLabel>
-          <IonInput
-            type='email'
-            value={email}
-            onIonChange={(e: any) => setEmail(e.detail.value)}
-            disabled={loading}
-          />
-        </IonItem>
-        <IonItem>
-          <IonLabel position='stacked'>Password</IonLabel>
-          <IonInput
-            type='password'
-            value={password}
-            onIonChange={(e: any) => setPassword(e.detail.value)}
-            disabled={loading}
-          />
-        </IonItem>
-        <div style={{ padding: 16 }}>
-          <IonButton
-            color='primary'
-            expand='block'
-            onClick={handleLogin}
-            disabled={loading}
-          >
-            {loading ? <IonSpinner name='crescent' /> : 'Sign In'}
-          </IonButton>
-          <IonButton
-            color='medium'
-            routerLink='/'
-            fill='clear'
-            expand='block'
-            disabled={loading}
-          >
-            Back
-          </IonButton>
-        </div>
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault()
+            await handleLogin()
+          }}
+        >
+          {error && <div className='error-message'>{error}</div>}
+          <IonItem>
+            <IonLabel position='stacked'>Email</IonLabel>
+            <IonInput
+              required
+              inputMode='email'
+              type='email'
+              value={email}
+              onIonChange={(e: any) => setEmail(e.detail.value)}
+              disabled={loading}
+            />
+          </IonItem>
+          <IonItem>
+            <IonLabel position='stacked'>Password</IonLabel>
+            <IonInput
+              required
+              type='password'
+              value={password}
+              onIonChange={(e: any) => setPassword(e.detail.value)}
+              disabled={loading}
+            />
+          </IonItem>
+          <div style={{ padding: 16 }}>
+            <IonButton
+              type='submit'
+              color='primary'
+              expand='block'
+              disabled={loading}
+            >
+              {loading ? <IonSpinner name='crescent' /> : 'Sign In'}
+            </IonButton>
+            <IonButton
+              color='medium'
+              routerLink='/'
+              fill='clear'
+              expand='block'
+              disabled={loading}
+            >
+              Back
+            </IonButton>
+          </div>
+        </form>
       </IonContent>
     </IonPage>
   )
