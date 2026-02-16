@@ -33,7 +33,7 @@ export default function Login() {
         return
       }
       await signIn(email, password)
-      history.push('/tab1')
+      history.push('/')
     } catch (err: any) {
       setError(err.message || 'Sign in failed')
       setLoading(false)
