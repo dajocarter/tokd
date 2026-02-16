@@ -8,21 +8,21 @@ import {
 import ExploreContainer from '../../components/ExploreContainer'
 import './index.css'
 
-export default function Tab2() {
+export default function Activity() {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Activity</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse='condense'>
           <IonToolbar>
-            <IonTitle size='large'>Tab 2</IonTitle>
+            <IonTitle size='large'>Activity</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name='Tab 2 page' />
+        <ExploreContainer name='Activity page' />
       </IonContent>
     </IonPage>
   )
