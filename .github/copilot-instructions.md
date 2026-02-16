@@ -95,6 +95,7 @@ npm run lint         # ESLint code quality checks
 - React functional components use function declaration syntax (e.g., `function Account() { ... }`) for better stack traces and readability
 - Default export pattern for page components
 - JSX syntax: `jsx: react-jsx` (automatic JSX transform, no React import needed)
+- JSX should always use semantic HTML elements where possible (e.g., `<button>` instead of `<div role="button">`)
 
 ### Testing Strategy
 
