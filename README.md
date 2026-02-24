@@ -77,4 +77,10 @@ npm run dev
 - Initialize app
 - Add Firebase for a realtime DB
 - Create, style, and edit Splash for logged-out users
-- Create signup and login pages
+- User can sign up
+- User can log in
+
+### Day 1
+
+- Replace Tab pages with Account, Activity, and Discover pages
+- User can log out
